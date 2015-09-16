@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+  </head>
+  <body ng-app="PersonalSite">
+    <md-content class="page-wrapper" layout="column">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2>
+            <span>Eric Rosenberg</span>
+          </h2>
+          <span flex></span>
+          <div layout="row">
+            <button onclick="window.open('//github.com/ehaydenr','_blank');" class="md-icon-button md-button md-default-theme">
+              <md-icon md-svg-src="img/icons/github-icon.svg"></md-icon>
+            </button>
+            <button onclick='location.href="mailto:ehaydenr@gmail.com";' class="md-icon-button md-button md-default-theme">
+              <md-icon md-svg-src="img/icons/ic_email_24px.svg"></md-icon>
+            </button>
+          </div>
+        </div>
+      </md-toolbar>
+      <md-content class="card-wrapper" layout-padding md-scroll-y>
+        <div ng-controller="ResumeCtrl">
+          <ps-resume-card heading="education.title">
+          <ps-education data="education.content"></ps-education>
+          </ps-resume-card>
+          <ps-resume-card heading="work.title">
+          <ps-titled-list ng-repeat="titled_list in work.titled_lists" data="titled_list"></ps-titled-list>
+          </ps-resume-card>
+          <ps-resume-card heading="computerscience.title">
+          <ps-titled-list data="computerscience.coursework"></ps-titled-list>
+          <div ng-repeat="e in computerscience.exposures" layout="row" layout-sm="column" style="padding-bottom:5px;">
+            <div flex="33"><strong>{{e.prefix}}</strong></div>
+            <div flex="66">{{e.content}}</div>
+          </div>
+          <ps-titled-list data="computerscience.interests"></ps-titled-list>
+          </ps-resume-card>
+          <ps-resume-card heading="other.title">
+          <ps-titled-list data="other.list"></ps-titled-list>
+          </ps-resume-card>
+        </div>
+      </md-content>
+    </md-content>
+    <script src="/dist/js/build.min.js"></script>
+  </body>
+</html>

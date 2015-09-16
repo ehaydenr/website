@@ -1,0 +1,36 @@
+md-fab-toolbar .md-fab-toolbar-wrapper {
+  height: inherit;
+}
+.card-wrapper {
+  background-color: #F0F0F0;
+}
+
+.page-wrapper {
+  height: 100%;
+}
+
+.page-wrapper > md-toolbar {
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+  z-index: 99;
+}
+
+md-toolbar.card-ctrl {
+  border-radius: 3px 3px 0 0;
+}
+
+[layout-padding].card-ctrl {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+resumecard > md-card {
+  margin-bottom: 20px;
+}
+
+md-content.card-ctrl {
+  border-radius: 3px;
+}
+
+md-card {
+  border-radius: 3px;
+}

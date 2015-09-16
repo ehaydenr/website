@@ -1,0 +1,13 @@
+{
+  "name": "Personal-Website",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-ng-annotate": "^1.0.1",
+    "jshint-stylish": "latest"
+  }
+}
